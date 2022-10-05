@@ -1,0 +1,160 @@
+/*
+    * Orden de los estilos css *
+    1- Posicionamiento (positioning)
+    2- Modelo de caja (Box-Model)
+    3- Tipografia (Typography)
+    4- Visual (Visual)
+    5- Misc (Otros)
+*/
+
+/*Custom Properties*/
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --fuente-heading: 'Poppins', sans-serif;
+}
+
+/*Estilos del sitio web*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(240, 100%, 100%); }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*main*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: url(../images/bg-mobile.svg), var(--Violet);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* header */
+.header {
+    align-self: flex-start;
+    margin-bottom: 4rem;
+}
+
+.header_img {
+    width: 150px;
+}
+
+/* seccion principal */
+.principal {
+    text-align: center;
+    color: #fff;
+}
+
+.principal_picture {
+    margin-bottom: 2rem;
+}
+
+.principal_text_h1 {
+    margin-bottom: 1rem;
+    font-family: var(--fuente-heading);
+    font-size: 2.5rem;    
+}
+
+.principal_text_p {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+
+.principal_btn {
+    display: inline-block;
+    padding: 1rem 6rem;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background-color: #fff;
+    color: var(--Violet);
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+.redes_sociales {
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.redes_sociales_icono {
+    display: flex;
+    padding: 0.5em;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        padding: 3rem 5rem 0;
+        background: url(../images/bg-desktop.svg), var(--Violet);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* background-size: cover; */
+    }
+
+    /* header */
+    .header {
+        margin-bottom: 6rem;
+    }
+
+    .header_img {
+        width: 180px;
+    }
+
+    /*seccion principal*/
+    .principal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .principal_picture {
+        margin: 0;
+    }
+
+    .principal_picture img {
+        object-fit: cover;
+    }
+
+    .principal_text {
+        margin-top: 2rem;
+    }
+
+    .principal_text_h1 {
+        font-size: 5rem;
+    }
+
+    .principal_btn {
+        padding: 1.2rem 6rem;
+        transition: all 0.5s ease;
+    }
+
+    .principal_btn:hover {
+        background-color: var(--Soft-Magenta);
+        color: #fff;
+    }
+
+    .redes_sociales {
+         align-self: flex-end;
+         margin: 0;
+    }
+
+    .redes_sociales_icono:hover {
+        border: 1px solid var(--Soft-Magenta);
+        color: var(--Soft-Magenta);
+    }
+}
